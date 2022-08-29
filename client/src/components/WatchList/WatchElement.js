@@ -33,7 +33,7 @@ const WatchElement = ({watchElement}) => {
             <td>{`${watchElement.last_trade_time.slice(0, 10)} ${watchElement.last_trade_time.slice(11, 19)}`}</td>
             <td>
                 <button
-                    className="h-10 w-10 rounded flex items-center justify-center shadow hover:bg-black/10"
+                    className="h-10 w-10 rounded flex items-center justify-center shadow hover:bg-red-100"
                     onClick={() => dispatch(removeFromWatchList(watchElement.ticker))}>
                     <img src="images/minus.svg" alt="remove" className="w-4 h-4"/>
                 </button>
