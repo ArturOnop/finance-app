@@ -1,9 +1,12 @@
-const App = () => {
-  return (
-      <div className="App">
+import Tickers from "./Tickers";
 
-      </div>
-  );
+const App = () => {
+
+    return (
+        <div className="App">
+            <Tickers/>
+        </div>
+    );
 }
 
 export default App;
