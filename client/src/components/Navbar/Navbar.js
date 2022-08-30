@@ -2,14 +2,14 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="pattern-waves items-center flex py-3 gap-5 text-primary shadow-sm">
-            <div className="ml-5">
+        <div className="pattern-waves items-center flex sticky top-0 z-10 py-3 gap-5 text-primary shadow">
+            <div className="ml-5 hidden sm:block">
                 <NavLink to="/"
                          className="btn btn-ghost normal-case text-xl bg-white border border-black/10 shadow-xl">
                     React Test Task
                 </NavLink>
             </div>
-            <div className="flex gap-5 justify-between ml-auto">
+            <div className="flex gap-5 justify-between ml-3 sm:ml-auto ">
                 <NavLink to="/"
                          className="btn btn-ghost bg-white border border-black/10 shadow-xl">
                     Home

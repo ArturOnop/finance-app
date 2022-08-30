@@ -24,17 +24,18 @@ const Ticker = ({ticker}) => {
         py-1 px-2">
             <ChangeIndicator indicator={indicator}/>
             <div className="flex flex-col justify-between h-full">
-                <div className="text-lg font-bold">{ticker.ticker}</div>
-                <div>{ticker.price}</div>
+                <div className="sm:text-lg font-bold">{ticker.ticker}</div>
+                <div className="text-sm sm:text-md">{ticker.price}</div>
             </div>
             <div
                 className={`flex flex-col justify-between h-full 
                     ${indicator === "Up" ? "text-green-600" : "text-red-600"}`}>
-                <div>{ticker.change}</div>
-                <div>{ticker.change_percent}%</div>
+                <div className="text-sm sm:text-md">{ticker.change}</div>
+                <div className="text-sm sm:text-md">{ticker.change_percent}%</div>
             </div>
-            <button className="h-10 w-10 rounded flex items-center justify-center shadow hover:bg-black/10"
-                    onClick={() => dispatch(addToWatchList(ticker.ticker))}>
+            <button
+                className="w-8 h-8 sm:h-10 sm:w-10 rounded flex items-center justify-center shadow hover:bg-black/10"
+                onClick={() => dispatch(addToWatchList(ticker.ticker))}>
                 <img src="images/plus.svg" alt="add" className="w-4 h-4"/>
             </button>
         </div>

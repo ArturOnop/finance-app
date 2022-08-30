@@ -30,23 +30,23 @@ const Trend = () => {
 
     return (
         <div className="w-5/6 mx-auto">
-            <div className="text-4xl my-5">Overall market trend</div>
+            <div className="text-2xl sm:text-4xl my-5">Overall market trend</div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                     <tr>
+                        <th>Last trade time</th>
                         <th>Price</th>
                         <th>Change</th>
                         <th>Change percent</th>
-                        <th>Last trade time</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
+                        <th>{`${trend.last_trade_time.slice(0, 10)} ${trend.last_trade_time.slice(11, 19)}`}</th>
                         <td>{trend.price}</td>
                         <td>{trend.change}</td>
                         <td>{trend.change_percent}</td>
-                        <td>{`${trend.last_trade_time.slice(0, 10)} ${trend.last_trade_time.slice(11, 19)}`}</td>
                     </tr>
                     </tbody>
                 </table>

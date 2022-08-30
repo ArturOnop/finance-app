@@ -20,20 +20,24 @@ const WatchElement = ({watchElement}) => {
 
     return (
         <tr key={watchElement.ticker}>
-            <th>{watchElement.ticker}</th>
-            <td>{watchElement.exchange}</td>
+            <th className="text-sm sm:text-base">{watchElement.ticker}</th>
+            <td className="text-sm sm:text-base">{watchElement.exchange}</td>
             <td className={`flex items-center gap-3 ${indicator === "Down" ? "text-red-600" : "text-green-600"}`}>
                 <ChangeIndicator indicator={indicator}/>
                 <div>{watchElement.price}</div>
             </td>
-            <td className={indicator === "Down" ? "text-red-600" : "text-green-600"}>{watchElement.change}</td>
-            <td className={indicator === "Down" ? "text-red-600" : "text-green-600"}>{watchElement.change_percent}%</td>
-            <td>{watchElement.dividend}</td>
-            <td>{watchElement.yield}</td>
-            <td>{`${watchElement.last_trade_time.slice(0, 10)} ${watchElement.last_trade_time.slice(11, 19)}`}</td>
+            <td className={`text-sm sm:text-base-md ${indicator === "Down" ? "text-red-600" : "text-green-600"}`}>
+                {watchElement.change}
+            </td>
+            <td className={`text-sm sm:text-base-md ${indicator === "Down" ? "text-red-600" : "text-green-600"}`}>
+                {watchElement.change_percent}%
+            </td>
+            <td className="text-sm sm:text-base">{watchElement.dividend}</td>
+            <td className="text-sm sm:text-base">{watchElement.yield}</td>
+            <td className="text-sm sm:text-base">{`${watchElement.last_trade_time.slice(0, 10)} ${watchElement.last_trade_time.slice(11, 19)}`}</td>
             <td>
                 <button
-                    className="h-10 w-10 rounded flex items-center justify-center shadow hover:bg-red-100"
+                    className="w-8 h-8 sm:h-10 sm:w-10 rounded flex items-center justify-center shadow hover:bg-red-100"
                     onClick={() => dispatch(removeFromWatchList(watchElement.ticker))}>
                     <img src="images/minus.svg" alt="remove" className="w-4 h-4"/>
                 </button>

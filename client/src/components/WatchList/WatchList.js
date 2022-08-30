@@ -19,7 +19,7 @@ const WatchList = () => {
     return (
         <>
             {watchList[0] ?
-                <div className="mt-10 overflow-x-auto shadow-lg">
+                <div className="my-10 overflow-x-auto shadow-lg">
                     <table className="table w-full">
                         <thead>
                         <tr>
@@ -33,7 +33,7 @@ const WatchList = () => {
                             <th>Last trade time</th>
                             <th>
                                 <button
-                                    className="h-10 w-10 rounded flex items-center
+                                    className="w-8 h-8 sm:h-10 sm:w-10 rounded flex items-center
                                     justify-center shadow hover:bg-red-100"
                                     onClick={() => dispatch(clearWatchList())}>
                                     <img src="images/minus.svg" alt="remove" className="w-4 h-4"/>
