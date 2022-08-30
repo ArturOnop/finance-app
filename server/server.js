@@ -49,13 +49,12 @@ function trackTickers(socket) {
         getQuotes(socket);
     }, fetchInterval);
 
-    socket.on('changeInterval', (interval, callback) => {
+    socket.on('changeInterval', interval => {
         clearInterval(timer)
         fetchInterval = interval;
         timer = setInterval(() => {
             getQuotes(socket)
         }, fetchInterval)
-        callback("Success");
     });
 
     socket.on('disconnect', () => {

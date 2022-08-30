@@ -1,15 +1,19 @@
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {changeInterval} from "../../redux/settingsModal/settingsModalActions";
+import {changeSettings} from "../../redux/settingsModal/settingsModalActions";
 
 const SettingsModal = () => {
     const settingsModalData = useSelector(state => state.settingsModal);
     const dispatch = useDispatch();
 
     const [interval, setInterval] = useState(5); //in sec
+    const [showTickers, setShowTickers] = useState(true);
+    const [showWatchList, setShowWatchList] = useState(true);
 
     useEffect(() => {
         setInterval(settingsModalData.interval / 1000);
+        setShowTickers(settingsModalData.showTickers);
+        setShowWatchList(settingsModalData.showWatchList);
     }, [])
 
     return (
@@ -34,11 +38,27 @@ const SettingsModal = () => {
                                    step="1"
                                    onChange={e => setInterval(Number(e.target.value))}/>
                         </div>
+                        <div className="form-control">
+                            <label className="label cursor-pointer">
+                                <span className="label-text">Show tickers</span>
+                                <input type="checkbox" className="toggle" checked={showTickers}
+                                       onChange={() => setShowTickers(!showTickers)}/>
+                            </label>
+                            <label className="label cursor-pointer">
+                                <span className="label-text">Show watchlist</span>
+                                <input type="checkbox" className="toggle" checked={showWatchList}
+                                       onChange={() => setShowWatchList(!showWatchList)}/>
+                            </label>
+                        </div>
                     </div>
                     <div className="modal-action">
                         <label htmlFor="my-modal-6"
                                className="btn"
-                               onClick={() => dispatch(changeInterval(interval * 1000))}>
+                               onClick={() => dispatch(changeSettings({
+                                   interval: interval * 1000,
+                                   showTickers: showTickers,
+                                   showWatchList: showWatchList
+                               }))}>
                             Save
                         </label>
                     </div>
