@@ -1,26 +1,28 @@
-import Tickers from "./Tickers/Tickers";
-import WatchList from "./WatchList/WatchList";
-import SearchTicker from "./SearchTicker/SearchTicker";
-import Header from "./Header/Header";
-import SettingsModal from "./SettingsModal/SettingsModal";
-import {useSelector} from "react-redux";
+import Navbar from "./Navbar/Navbar";
+import TickersHistory from "./TickersHistory/TickersHistory";
+import {Navigate, Route, Routes} from "react-router-dom";
+import Home from "./Home/Home";
+import {useEffect} from "react";
+import {getTickers} from "../redux/tickers/tickersAction";
+import {socket} from "../socket/socket";
+import {useDispatch} from "react-redux";
 
 const App = () => {
-    const settingsModalData = useSelector(state => state.settingsModal);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getTickers());
+        return () => socket.close();
+    }, []);
 
     return (
         <div className="App ">
-            <Header/>
-            <div className="w-5/6 mx-auto">
-                <div className={settingsModalData.showTickers ? "block" : "hidden"}>
-                    <SearchTicker/>
-                    <Tickers/>
-                </div>
-                <div className={settingsModalData.showWatchList ? "block" : "hidden"}>
-                    <WatchList/>
-                </div>
-            </div>
-            <SettingsModal/>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/tickers-history" element={<TickersHistory/>}/>
+                <Route path="*" element={<Navigate to="/"/>}/>
+            </Routes>
         </div>
     );
 }

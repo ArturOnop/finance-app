@@ -9,12 +9,6 @@ const Tickers = () => {
 
     const tickersData = useSelector(state => state.tickers);
     const searchTickerData = useSelector(state => state.searchTicker);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getTickers());
-        return () => socket.close();
-    }, []);
 
     return (
         <>
