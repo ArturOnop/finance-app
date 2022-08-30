@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {getTickers} from "../../redux/tickers/tickersAction";
 import Ticker from "./Ticker";
 import {socket} from "../../socket/socket";
+import Error from "../Error/Error";
 
 const Tickers = () => {
 
@@ -21,7 +22,7 @@ const Tickers = () => {
                 {!tickersData.tickers[0] ?
                     <div className="loader">Loading....</div> :
                     tickersData.error ?
-                        <div>Error occurred: {tickersData.error}</div> :
+                        <Error error={tickersData.error}/> :
                         tickersData.tickers
                             .filter(ticker => searchTickerData ?
                                 ticker.ticker.includes(searchTickerData.toUpperCase()) : true)
