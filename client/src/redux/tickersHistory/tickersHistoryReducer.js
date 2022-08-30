@@ -6,7 +6,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_TICKERS_HISTORY:
             let newState = state;
-            if (state.length === 10) newState.pop();
+            if (state.length === 3) newState.pop();
             newState.unshift(action.payload);
             return [...newState];
         case CLEAR_TICKERS_HISTORY:

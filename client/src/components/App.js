@@ -1,11 +1,12 @@
 import Navbar from "./Navbar/Navbar";
-import TickersHistory from "./TickersHistory/TickersHistory";
+import Trend from "./Trend/Trend";
 import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "./Home/Home";
 import {useEffect} from "react";
 import {getTickers} from "../redux/tickers/tickersAction";
 import {socket} from "../socket/socket";
 import {useDispatch} from "react-redux";
+import SettingsModal from "./SettingsModal/SettingsModal";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -20,9 +21,10 @@ const App = () => {
             <Navbar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/tickers-history" element={<TickersHistory/>}/>
+                <Route path="/trend" element={<Trend/>}/>
                 <Route path="*" element={<Navigate to="/"/>}/>
             </Routes>
+            <SettingsModal/>
         </div>
     );
 }

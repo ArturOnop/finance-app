@@ -1,8 +1,5 @@
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getTickers} from "../../redux/tickers/tickersAction";
+import {useSelector} from "react-redux";
 import Ticker from "./Ticker";
-import {socket} from "../../socket/socket";
 import Error from "../Error/Error";
 
 const Tickers = () => {

@@ -33,7 +33,8 @@ const WatchList = () => {
                             <th>Last trade time</th>
                             <th>
                                 <button
-                                    className="h-10 w-10 rounded flex items-center justify-center shadow hover:bg-red-100"
+                                    className="h-10 w-10 rounded flex items-center
+                                    justify-center shadow hover:bg-red-100"
                                     onClick={() => dispatch(clearWatchList())}>
                                     <img src="images/minus.svg" alt="remove" className="w-4 h-4"/>
                                 </button>
