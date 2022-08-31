@@ -2,6 +2,9 @@
 /client/node_modules
 /server/node_modules
 
+# coverage
+/client/coverage
+
 # production
 /client/build
 /server/build
