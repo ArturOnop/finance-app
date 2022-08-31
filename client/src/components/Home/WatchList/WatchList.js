@@ -1,7 +1,7 @@
 import WatchElement from "./WatchElement";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {clearWatchList, removeFromWatchList} from "../../redux/watchList/watchListAction";
+import {clearWatchList, removeFromWatchList} from "../../../redux/watchList/watchListAction";
 
 const WatchList = () => {
 

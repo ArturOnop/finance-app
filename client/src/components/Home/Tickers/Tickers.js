@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import Ticker from "./Ticker";
-import Error from "../Error/Error";
+import Error from "../../Error/Error";
 
 const Tickers = () => {
 

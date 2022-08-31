@@ -1,4 +1,4 @@
-import {removeFromWatchList} from "../../redux/watchList/watchListAction";
+import {removeFromWatchList} from "../../../redux/watchList/watchListAction";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import ChangeIndicator from "../Tickers/ChangeIndicator";

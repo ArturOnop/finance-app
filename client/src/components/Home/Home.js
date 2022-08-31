@@ -1,6 +1,6 @@
-import SearchTicker from "../SearchTicker/SearchTicker";
-import Tickers from "../Tickers/Tickers";
-import WatchList from "../WatchList/WatchList";
+import SearchTicker from "./SearchTicker/SearchTicker";
+import Tickers from "./Tickers/Tickers";
+import WatchList from "./WatchList/WatchList";
 import {useSelector} from "react-redux";
 
 const Home = () => {

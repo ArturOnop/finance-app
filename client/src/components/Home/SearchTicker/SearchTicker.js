@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {changeSearchTicker} from "../../redux/searchTicker/searchTickerAction";
+import {changeSearchTicker} from "../../../redux/searchTicker/searchTickerAction";
 
 const SearchTicker = () => {
     const searchTickerData = useSelector(state => state.searchTicker);

@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import ChangeIndicator from "./ChangeIndicator";
 import {useEffect, useState} from "react";
-import {addToWatchList} from "../../redux/watchList/watchListAction";
+import {addToWatchList} from "../../../redux/watchList/watchListAction";
 
 const Ticker = ({ticker}) => {
     const tickerPrevData = useSelector(state => {
