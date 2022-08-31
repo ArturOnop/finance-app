@@ -1,7 +1,7 @@
 import Ticker from "../../components/Home/Tickers/Ticker";
 import React from "react";
 import {renderWithRedux} from "../renderWithRedux";
-import {ticker, tickers, tickersHistoryDown, tickersHistoryUp} from "./Ticker.test.const";
+import {tickersShort, ticker, tickersHistoryUp, tickersHistoryDown} from "../constsForTesting";
 import {screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Home from "../../components/Home/Home";
@@ -40,7 +40,7 @@ describe("ticker component", () => {
     test("should add to watching list on button clicked", () => {
         renderWithRedux(<Home/>, {
             initialState: {
-                tickers: tickers
+                tickers: tickersShort
             }
         });
         let addButton = screen.getByRole("button", {name: "add"});

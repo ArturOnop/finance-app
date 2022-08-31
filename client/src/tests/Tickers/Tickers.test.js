@@ -2,21 +2,21 @@ import React from "react";
 import {renderWithRedux} from "../renderWithRedux";
 import {screen} from "@testing-library/react";
 import Tickers from "../../components/Home/Tickers/Tickers";
-import {errorTickers, tickers} from "./Tickers.test.const";
+import {tickersMid, errorTickers} from "../constsForTesting";
 
 describe("tickers component", () => {
 
     test("should render correctly", () => {
         renderWithRedux(<Tickers/>, {
             initialState: {
-                tickers: tickers,
+                tickers: tickersMid,
                 searchTicker: ""
             }
         });
         expect(screen.getAllByRole("button")).toHaveLength(3);
-        expect(screen.getByText(tickers.tickers[0].ticker)).toBeInTheDocument();
-        expect(screen.getByText(tickers.tickers[1].ticker)).toBeInTheDocument();
-        expect(screen.getByText(tickers.tickers[2].ticker)).toBeInTheDocument();
+        expect(screen.getByText(tickersMid.tickers[0].ticker)).toBeInTheDocument();
+        expect(screen.getByText(tickersMid.tickers[1].ticker)).toBeInTheDocument();
+        expect(screen.getByText(tickersMid.tickers[2].ticker)).toBeInTheDocument();
     })
 
     test("should render error", () => {
