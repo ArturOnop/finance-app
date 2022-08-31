@@ -1,7 +1,7 @@
 import WatchElement from "./WatchElement";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {clearWatchList, removeFromWatchList} from "../../../redux/watchList/watchListAction";
+import {clearWatchList} from "../../../redux/watchList/watchListAction";
 
 const WatchList = () => {
 
@@ -33,6 +33,7 @@ const WatchList = () => {
                             <th>Last trade time</th>
                             <th>
                                 <button
+                                    data-testid="remove-all-watchlist"
                                     className="w-8 h-8 sm:h-10 sm:w-10 rounded flex items-center
                                     justify-center shadow hover:bg-red-100"
                                     onClick={() => dispatch(clearWatchList())}>

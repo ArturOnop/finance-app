@@ -10,8 +10,8 @@ const Tickers = () => {
     return (
         <>
             <div className="flex gap-x-10 shadow-lg p-5 mt-10 overflow-x-auto rounded">
-                {!tickersData.tickers[0] ?
-                    <div className="loader">Loading....</div> :
+                {!tickersData.tickers[0] && !tickersData.error ?
+                    <div className="loader">Loading...</div> :
                     tickersData.error ?
                         <Error error={tickersData.error}/> :
                         tickersData.tickers
