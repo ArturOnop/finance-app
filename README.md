@@ -17,7 +17,7 @@ Bonus features:
 Extra features:
 
 - the possibility to search for tickers on search bar input ✅
-- overall market trend (avarage tickers value) ✅
+- overall market trend (average tickers value) ✅
 - React routing ✅
 - responsive design ✅
 
