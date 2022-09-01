@@ -9,11 +9,11 @@ const Home = () => {
 
     return (
         <div className="w-5/6 mx-auto">
-            <div className={settingsModalData.showTickers ? "block" : "hidden"}>
+            <div className={settingsModalData.showTickers ? "block" : "hidden"} data-testid="search-and-tickers">
                 <SearchTicker/>
                 <Tickers/>
             </div>
-            <div className={settingsModalData.showWatchList ? "block" : "hidden"}>
+            <div className={settingsModalData.showWatchList ? "block" : "hidden"} data-testid="watch-list">
                 <WatchList/>
             </div>
         </div>
