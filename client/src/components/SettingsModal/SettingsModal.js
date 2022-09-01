@@ -58,7 +58,8 @@ const SettingsModal = () => {
                                    interval: interval * 1000,
                                    showTickers: showTickers,
                                    showWatchList: showWatchList
-                               }))}>
+                               }))}
+                               data-testid="save-settings">
                             Save
                         </label>
                     </div>
