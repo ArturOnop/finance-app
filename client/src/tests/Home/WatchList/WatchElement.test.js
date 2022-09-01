@@ -1,9 +1,9 @@
-import {renderWithRedux} from "../renderWithRedux";
-import {ticker, tickersHistoryDown, tickersHistoryUp, tickersMid, tickersShort} from "../constsForTesting";
+import {renderWithRedux} from "../../renderWithRedux";
+import {ticker, tickersHistoryDown, tickersHistoryUp, tickersMid, tickersShort} from "../../constsForTesting";
 import {screen} from "@testing-library/react";
 import React from "react";
-import WatchElement from "../../components/Home/WatchList/WatchElement";
-import Home from "../../components/Home/Home";
+import WatchElement from "../../../components/Home/WatchList/WatchElement";
+import Home from "../../../components/Home/Home";
 import userEvent from "@testing-library/user-event";
 
 describe("watch element component", () => {

@@ -1,8 +1,8 @@
-import {renderWithRedux} from "../renderWithRedux";
+import {renderWithRedux} from "../../renderWithRedux";
 import {screen} from "@testing-library/react";
 import React from "react";
-import WatchList from "../../components/Home/WatchList/WatchList";
-import {errorTickers, tickersFull} from "../constsForTesting";
+import WatchList from "../../../components/Home/WatchList/WatchList";
+import {errorTickers, tickersFull} from "../../constsForTesting";
 import userEvent from "@testing-library/user-event";
 
 describe("watch list component", () => {

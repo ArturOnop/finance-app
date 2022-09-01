@@ -1,8 +1,8 @@
-import {renderWithRedux} from "../renderWithRedux";
-import SearchTicker from "../../components/Home/SearchTicker/SearchTicker";
+import {renderWithRedux} from "../../renderWithRedux";
+import SearchTicker from "../../../components/Home/SearchTicker/SearchTicker";
 import {fireEvent, screen} from "@testing-library/react";
-import Home from "../../components/Home/Home";
-import {tickersMid} from "../constsForTesting";
+import Home from "../../../components/Home/Home";
+import {tickersMid} from "../../constsForTesting";
 
 describe("search ticker component", () => {
 

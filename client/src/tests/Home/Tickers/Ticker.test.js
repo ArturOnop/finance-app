@@ -1,10 +1,10 @@
-import Ticker from "../../components/Home/Tickers/Ticker";
+import Ticker from "../../../components/Home/Tickers/Ticker";
 import React from "react";
-import {renderWithRedux} from "../renderWithRedux";
-import {tickersShort, ticker, tickersHistoryUp, tickersHistoryDown} from "../constsForTesting";
+import {renderWithRedux} from "../../renderWithRedux";
+import {tickersShort, ticker, tickersHistoryUp, tickersHistoryDown} from "../../constsForTesting";
 import {screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Home from "../../components/Home/Home";
+import Home from "../../../components/Home/Home";
 
 describe("ticker component", () => {
 

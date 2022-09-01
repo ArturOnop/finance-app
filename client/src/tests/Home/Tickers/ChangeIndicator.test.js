@@ -1,7 +1,7 @@
-import {renderWithRedux} from "../renderWithRedux";
+import {renderWithRedux} from "../../renderWithRedux";
 import {screen} from "@testing-library/react";
 import React from "react";
-import ChangeIndicator from "../../components/Home/Tickers/ChangeIndicator";
+import ChangeIndicator from "../../../components/Home/Tickers/ChangeIndicator";
 
 describe("change indicator component", () => {
 

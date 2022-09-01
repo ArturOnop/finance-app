@@ -1,8 +1,8 @@
 import React from "react";
-import {renderWithRedux} from "../renderWithRedux";
+import {renderWithRedux} from "../../renderWithRedux";
 import {screen} from "@testing-library/react";
-import Tickers from "../../components/Home/Tickers/Tickers";
-import {tickersMid, errorTickers} from "../constsForTesting";
+import Tickers from "../../../components/Home/Tickers/Tickers";
+import {tickersMid, errorTickers} from "../../constsForTesting";
 
 describe("tickers component", () => {
 
