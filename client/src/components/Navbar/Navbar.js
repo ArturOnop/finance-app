@@ -20,7 +20,7 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className="mr-5">
-                <label htmlFor="my-modal-6"
+                <label htmlFor="my-modal-6" data-testid="toggle-modal"
                        className="btn btn-ghost bg-white border border-black/10 shadow-xl modal-button">
                     <img src="images/settings.svg" className="w-5 h-5" alt="settings"/>
                 </label>
