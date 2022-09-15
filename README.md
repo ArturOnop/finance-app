@@ -1,35 +1,30 @@
-# React Test Task
+# Finance app for monitoring tickers
 
-## Requirements and features
+## App provides customer with different features which are listed below
 
-Main requirements:
+- application renders price changes for some tickers in real time
+- additional visual effects ⬆ ⬇ to highlight positive or negative changes in the prices
+- the possibility to switch on/off tickers by user (in settings modal)
+- the possibility to specify interval time by user (in settings modal)
+- the possibility to add/remove ticker from watching list
+- the possibility to search for tickers on search bar input
+- overall market trend (average tickers value)
 
-- application should connect to the locally running service ✅
-- application should render price changes for some tickers in real time ✅
+### Project consists of front-end and back-end 
 
-Bonus features:
+## Main technologies used:
 
-- additional visual effects ⬆ ⬇ to highlight positive or negative changes in the prices ✅
-- the possibility to switch on/off tickers by user (in settings modal) ✅
-- the possibility to specify interval time by user (in settings modal) ✅
-- the possibility to add/remove ticker from watching list ✅
+- React (with hooks)
+- Redux (with Redux-Thunk)
+- React Router
+- Tailwindcss + DaysiUI libraries
+- Testing Library (components coverage - 100%)
+- Node.js
+- Express
+- Socket.io
+- Also, this app has fully responsive design
 
-Extra features:
-
-- the possibility to search for tickers on search bar input ✅
-- overall market trend (average tickers value) ✅
-- React routing ✅
-- responsive design ✅
-
-You should use the next technologies:
-
-- React with hooks ✅
-- Redux with Redux-Thunk ✅
-- Socket.io ✅
-- Tailwindcss + DaysiUI libraries ✅
-- Testing Library (components coverage - 100%) ✅
-
-## Running the local service
+## Running server locally
 
 1. Open a new bash shell
 2. ```cd server```
@@ -38,7 +33,7 @@ You should use the next technologies:
 5. You can visit [http://localhost:4000](http://localhost:4000) to check that the service is working correctly and
    inspect the data it produces.
 
-## Run your application
+## Run application locally
 
 1. Open a new bash shell
 2. ```cd client```
